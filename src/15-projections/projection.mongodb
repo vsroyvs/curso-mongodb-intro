@@ -1,0 +1,8 @@
+use("platzi_store")
+
+db.inventory.find(
+    // query    
+    {},
+    // projection 
+    {"item.code": 1}
+)

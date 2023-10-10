@@ -1,0 +1,17 @@
+use("platzi_store")
+// implicito
+// db.inventory.find({"item.name": "ab"})
+
+// explicito
+// db.inventory.find({"item.name": {$eq: "ab"}})
+
+db.inventory.updateMany({
+    //query
+    "item.code": { $ne: "123"}
+},
+{
+    $inc: {
+        qty: -5
+    }
+}
+)

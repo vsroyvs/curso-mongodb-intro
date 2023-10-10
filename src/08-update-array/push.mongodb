@@ -1,0 +1,12 @@
+use("platzi_store")
+
+db.inventory.updateOne(
+    // query
+    {_id: 4},
+    // update
+    {
+        $push: {
+            tags: "headphone"
+        }
+    }
+)
